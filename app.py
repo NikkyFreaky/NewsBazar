@@ -12,6 +12,7 @@ app = Flask(__name__)
 # Настройка CORS для приложения
 CORS(app)
 
+
 @app.route('/news', methods=['GET'])
 def get_news():
     # Параметры для запроса к News API
@@ -25,6 +26,7 @@ def get_news():
 
     # Возвращение ответа от News API в формате JSON с кодом статуса 200
     return jsonify(response.json()), 200
+
 
 # Запуск Flask приложения, если скрипт запущен напрямую
 if __name__ == "__main__":
